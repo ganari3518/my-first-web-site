@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Open Source</title>
+    <link rel="stylesheet" href="css/mystyle.css" />
+    <script src="js/master.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1><a href="index.html">Home</a></h1>
+    <div id="grid">
+      <div id="side-bar">
+        <ol>
+          <li><a href="1.html">마크다운</a></li>
+          <li><a href="2.html">웹 호스팅 서비스</a></li>
+          <li><a href="3.html">오픈소스</a></li>
+          <li><a href="4.html">클라우드 컴퓨팅</a></li>
+        </ol>   
+        <input id="night_day" type="button" value="night"
+        onclick="nightDayHandler(this)"/>     
+        <input id="del_under" type="button" value="del"
+        onclick="underLineHandler(this)"/>
+        <div id="calc">
+          <input type="text" style="width:150px; height:30px;" id="tostring">
+            <ul style="margin:0px; padding:0px;">
+            <li><input class="button" type="button" value="=" style="width:150px; height:30px;" onclick="calc_result()"></li></br>
+            <li><input class="button" type="button" value="+" onclick="calc_event('+')"></li>
+            <li><input class="button" type="button" value="-" onclick="calc_event('-')"></li>
+            <li><input class="button" type="button" value="*" onclick="calc_event('*')"></li>
+            <li><input class="button" type="button" value="/" onclick="calc_event('/')"></li></br>
+            <script>
+              for(let i = 1; i <= 9; i++){
+                document.write("<li><input class='button' type='button' value='" + i + "' onclick='calc_event(" + i + ")'></li>");
+                if(i % 4 == 0)
+                  document.write("<br>");
+              }
+            </script>
+            <li><input class="button" type="button" value="0" onclick="calc_event(0)"></li>
+            <li><input class="button" type="button" value="c" onclick="calc_reset()"></li>
+          </ul>
+      </div>
+      </div>
+      <div>
+        <h2>오픈소스란?</h2>
+        <img
+          src="data:image/png;base64,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"
+          alt="js image"
+          width="30%"
+        />
+        <br>
+        <p>
+          오픈 소스(open source) 제품에는 소스 코드,[1] 디자인 문서,[2] 또는 제품의 내용을 사용할 권한이 포함된다. 대체적으로 이를 오픈 소스 모델이라고 부르며 여기서 오픈 소스 소프트웨어나 기타 제품들이 오픈 소스 소프트웨어 운동의 일부로서 오픈 소스 사용권으로 출시된다. 이 용어의 사용은 소프트웨어와 함께 기원되었으나 소프트웨어 부문을 넘어서 다른 오픈 콘텐츠 및 개방형 협업의 형태로 확장되어가고 있다.
+        </p>
+        <p>
+          <h2>장단점</h2>
+          <ul>
+            <h3>장점</h3>
+            <li>이용에 비용이 들지 않거나 적다.</li>
+            <li>원하는 대로 변형 가능</li>
+            <li>보안 취약점이 쉽게 발견된다. 그러나 오픈 소스가 보안 측면에서 더 우수하다는 것을 의미하지는 않는다.</li>
+            <li>누구나 버그를 고칠 수 있다.</li>
+            <li>특정 제조업체인 벤더(vendor)에 의존하지 않아도 된다.</li>
+          </ul>
+          <ul>
+            <h3>단점</h3>
+            <li>사용이 편리한 배포판이 아닌 소스 코드를 직접 빌드하여 사용하기에는 비숙련 사용자들은 이용이 어려울 수 있다.</li>
+            <li>이미 표준적으로 사용되는 소프트웨어가 있는 경우 호환성 문제가 발생</li>
+            <li>고객 지원이 불리</li>
+            <li>잘못된 정보일 수 있음</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

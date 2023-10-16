@@ -1,0 +1,69 @@
+/* mystyle.css */
+h1 {
+    font-size: 45px;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    margin: 0px;
+    padding: 20px;
+    align-items: center;
+  }
+  
+  
+  #side-bar {
+    border-right: 1px solid gray;
+    width: max-content;
+    margin: 0;
+    padding-right: 20px;
+  }
+
+  #calc {
+    font-size: 0;
+    margin-top: 30px;
+    border:3px solid gray;
+    text-align: center;
+  }
+
+  #calc .button{
+    font-size: 14px;
+    width:40px;
+    height: 40px;
+  }
+  
+  #calc li{
+    display: inline-block;
+  }
+  
+  /*
+  #grid ol {
+    border-right: 1px solid gray;
+    width: 100px;
+    margin: 0px;
+    padding: 20px;
+  }*/
+  
+  body {
+    margin: 0px;
+  }
+  
+  #grid {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+  }
+  
+  @media (max-width: 800px) {
+    #grid {
+      display: block;    
+    }
+  
+    /*#grid ol {
+      border-right: none;
+    }*/
+  
+    #side-bar{
+      border-right: none;
+    }
+  
+    h1 {
+      border-bottom: none;
+    }  
+  }
