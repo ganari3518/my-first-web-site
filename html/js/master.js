@@ -69,3 +69,14 @@ var Body = {
   function calc_result(){
     $("#tostring").val(eval(num));
   }
+
+  var result = 0;
+
+  function mouseOverFunction(){
+    document.getElementById('mouse_text').innerHTML = result += 1;
+  }
+
+  function mouseOverReset(){
+    result = 0;
+    document.getElementById('mouse_text').innerHTML = result;
+  }
